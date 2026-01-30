@@ -11,28 +11,48 @@
 <body>
 
 <div class="wrapper">
+<<<<<<< HEAD
     <form id="loginForm" method="POST" action="login.php">
         <h1>Login</h1>
 
         <div class="input-box">
             <input type="text" name="username" placeholder="Digite seu email" required>
+=======
+    <form id="loginForm">
+        <h1>Login</h1>
+
+        <div class="input-box">
+            <input type="text" name="username" placeholder="Coloque admin para acessar" required>
+>>>>>>> bf0ccc428b8f6657525a77c1fa9787637c8098ea
             <i class='bx bxs-user'></i>
         </div>
 
         <div class="input-box">
+<<<<<<< HEAD
             <input type="password" name="password" placeholder="Digite sua senha" required id="passwordInput">
+=======
+            <input type="password" name="password" placeholder="A senha é admin" required>
+>>>>>>> bf0ccc428b8f6657525a77c1fa9787637c8098ea
             <i class='bx bxs-lock-alt'></i>
         </div>
 
         <div class="remember-forgot">
             <label><input type="checkbox" id="showPassword">Visualizar</label>
+<<<<<<< HEAD
+=======
+            <a href="#">A senha para acessar é: admin</a>
+>>>>>>> bf0ccc428b8f6657525a77c1fa9787637c8098ea
         </div>
 
         <button type="submit" class="btn">Login</button>
 
+<<<<<<< HEAD
         <div id="message" style="color:red; margin-top:10px;">
             <?php echo $message; ?>
         </div>
+=======
+        <div id="message" style="color:red; margin-top:10px;"></div>
+>>>>>>> bf0ccc428b8f6657525a77c1fa9787637c8098ea
 
         <div class="register-link">
             <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
@@ -42,10 +62,126 @@
 </div>
 
 <script>
+<<<<<<< HEAD
 const showPassword = document.getElementById('showPassword');
 const passwordInput = document.getElementById('passwordInput');
 showPassword.addEventListener('change', () => {
     passwordInput.type = showPassword.checked ? 'text' : 'password';
+});
+</script>
+
+</body>
+</html>
+=======
+
+const users = [
+    { username: 'eduardo', password: '123456' },
+    { username: 'admin', password: 'admin' }
+];
+
+
+const showPassword = document.getElementById('showPassword');
+const passwordInput = document.querySelector('input[name="password"]');
+showPassword.addEventListener('change', () => {
+    passwordInput.type = showPassword.checked ? 'text' : 'password';
+});
+
+
+const form = document.getElementById('loginForm');
+const message = document.getElementById('message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const username = form.username.value;
+    const password = form.password.value;
+
+    const user = users.find(u => u.username === username && u.password === password);
+
+    if (user) {
+        window.location.href = 'inicial.html'; // redireciona
+    } else {
+        message.textContent = 'Usuário ou senha incorretos.';
+    }
+});
+</script>
+
+</body>
+</html>
+>>>>>>> bf0ccc428b8f6657525a77c1fa9787637c8098ea
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img4/tutorial-de-jogos.png" type="image/x-icon">
+    <link rel="stylesheet" href="desing/desing.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+
+<div class="wrapper">
+    <form id="loginForm">
+        <h1>Login</h1>
+
+        <div class="input-box">
+            <input type="text" name="username" placeholder="Usuário: admin" required>
+            <i class='bx bxs-user'></i>
+        </div>
+
+        <div class="input-box">
+            <input type="password" name="password" placeholder="Senha: admin" required>
+            <i class='bx bxs-lock-alt'></i>
+        </div>
+
+        <div class="remember-forgot">
+            <label>
+                <input type="checkbox" id="showPassword"> Visualizar senha
+            </label>
+            <a href="#">Usuário e senha: admin</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div id="message" style="color:red; margin-top:10px;"></div>
+
+        <div class="register-link">
+            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </form>
+</div>
+
+<script>
+const users = [
+    { username: 'admin', password: 'admin' },
+    { username: 'eduardo', password: '123456' }
+];
+
+const showPassword = document.getElementById('showPassword');
+const passwordInput = document.querySelector('input[name="password"]');
+
+showPassword.addEventListener('change', () => {
+    passwordInput.type = showPassword.checked ? 'text' : 'password';
+});
+
+const form = document.getElementById('loginForm');
+const message = document.getElementById('message');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const username = form.username.value;
+    const password = form.password.value;
+
+    const user = users.find(
+        u => u.username === username && u.password === password
+    );
+
+    if (user) {
+        window.location.href = 'inicial.html';
+    } else {
+        message.textContent = 'Usuário ou senha incorretos.';
+    }
 });
 </script>
 
