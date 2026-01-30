@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Bogle&display=swap');
+
+
+:root {
+  --primeira-cor: rgba(209, 10, 10, 0.904);
+  --segunda-cor: rgb(28, 32, 36);
+  --terceira-cor: rgb(18, 18, 19);
+  --cor-para-links: rgb(122, 6, 6);
+  --cor-para-links2: rgb(231, 41, 41);
+  --cor-para-links3: rgb(190, 56, 7);
+  --fonte-primeiro: "BBH Bartle", sans-serif;
+  --fonte-segundo: "BBH Bogle", sans-serif;
+}
+
+body {
+  background-color: rgb(28, 32, 36);
+  color: rgba(209, 10, 10, 0.904);
+}
+
+.banner-jogo {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.banner-jogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.zero--titulo {
+  text-align: left;
+  font-family: var(--fonte-primeiro);
+}
+
+.zero--texto {
+  font-family: var(--fonte-segundo);
+  font-size: 1em;
+}
+
+.zero--img {
+  margin-top: 1em;
+  display: block;
+  margin: auto;
+  border: 3px solid rgb(190, 56, 7);
+  border-radius: 7px;
+  width: 250px;
+}
+
+.zero--titulo2 {
+  text-align: center;
+  font-family: var(--fonte-primeiro);
+}
+
+.zero--texto2 {
+  text-align: center;
+  font-family: var(--fonte-segundo);
+}
+
+.video-thumb {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border: 4px solid var(--cor-para-links2);
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.video-thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--cor-para-links2);
+}
+
+.zero--link {
+  display: table;
+  margin: 1em auto;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  max-width: 100%;
+
+  padding: 10px 20px;
+
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  font-family: var(--fonte-segundo);
+}
+
+.rodape--zero {
+  background-color: rgb(18, 18, 19);
+  color: rgba(209, 10, 10, 0.904);
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+  font-family: var(--fonte-segundo);
+}
+
+.rodape--link--zero {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  font-family: var(--fonte-segundo);
+}
+
+@media (max-width: 768px) {
+
+  .banner-jogo {
+    height: auto;
+  }
+
+  .banner-jogo img {
+    height: auto;
+    object-fit: contain;
+  }
+}

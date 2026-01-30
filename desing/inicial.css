@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Bogle&display=swap');
+
+
+:root {
+  --primeira-cor: rgba(209, 10, 10, 0.904);
+  --segunda-cor: rgb(28, 32, 36);
+  --terceira-cor: rgb(18, 18, 19);
+  --cor-para-links: rgb(122, 6, 6);
+  --cor-para-links2: rgb(231, 41, 41);
+  --cor-para-links3: rgb(190, 56, 7);
+  --fonte-primeiro: "BBH Bartle", sans-serif;
+  --fonte-segundo: "BBH Bogle", sans-serif;
+}
+
+body {
+  background-color: rgb(28, 32, 36);
+  color: rgba(209, 10, 10, 0.904);
+}
+
+.principal {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.cabecalho {
+  background-color: rgb(18, 18, 19);
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho--text {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  margin-right: 0;
+  font-family: var(--fonte-segundo);
+}
+
+.cabecalho--text2 {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  margin-right: 3.5em;
+  margin-left: 0;
+  font-family: var(--fonte-segundo);
+}
+
+.principal--titulo {
+  text-align: center;
+  font-family: var(--fonte-primeiro);
+}
+
+.principal--texto {
+  text-align: center;
+  font-family: var(--fonte-segundo);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  font-family: var(--fonte-primeiro);
+}
+
+.lista {
+  text-align: center;
+  text-decoration: transparent;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.card--link {
+  display: block;
+  margin: 0 auto;
+
+}
+
+.card--img {
+  margin-top: 1em;
+  display: block;
+  margin: auto;
+  border: 3px solid rgb(190, 56, 7);
+  border-radius: 7px;
+  width: 250px;
+  /* opcional */
+}
+
+.card--link {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 5px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  margin-right: 0.5em;
+  font-family: var(--fonte-segundo);
+  margin: 2em;
+}
+
+.card--texto {
+  text-align: center;
+  font-size: 1.5em;
+  font-family: var(--fonte-segundo);
+}
+
+.rodape {
+  background-color: rgb(18, 18, 19);
+  color: rgba(209, 10, 10, 0.904);
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+  font-family: var(--fonte-segundo);
+}
+
+.rodape--link {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  font-family: var(--fonte-segundo);
+}
+
+@media screen and (max-width:500) {
+  .cabecalho {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .cabecalho a {
+    display: block;
+    width: 80%;
+    text-align: center;
+  }
+
+  .cabecalho--text2 {
+    margin-right: 5em;
+
+  }
+
+  .card--img {
+    width: 70%;
+  }
+
+  .rodape {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+}
