@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Bogle&display=swap');
+
+
+:root {
+  --primeira-cor: rgba(209, 10, 10, 0.904);
+  --segunda-cor: rgb(28, 32, 36);
+  --terceira-cor: rgb(18, 18, 19);
+  --cor-para-links: rgb(122, 6, 6);
+  --cor-para-links2: rgb(231, 41, 41);
+  --cor-para-links3: rgb(190, 56, 7);
+  --fonte-primeiro: "BBH Bartle", sans-serif;
+  --fonte-segundo: "BBH Bogle", sans-serif;
+}
+
+body {
+  background-color: rgb(28, 32, 36);
+  color: rgba(209, 10, 10, 0.904);
+}
+
+.cabecalho--principal {
+  background-color: rgb(18, 18, 19);
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cabecalho--text-- {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  margin-right: 0;
+  font-family: var(--fonte-segundo);
+}
+
+.cabecalho--text--2 {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  margin-right: 3.5em;
+  margin-left: 0;
+  font-family: var(--fonte-segundo);
+}
+
+.principal-- {
+  padding: 2em;
+}
+
+.cards-jogos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* Desktop */
+  gap: 2em;
+}
+
+.card {
+  background-color: rgb(18, 18, 19);
+  border: 2px solid var(--cor-para-links3);
+  border-radius: 12px;
+  overflow: hidden;
+
+  text-decoration: none;
+  color: var(--primeira-cor);
+  font-family: var(--fonte-segundo);
+
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card span {
+  display: block;
+  padding: 1em;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.rodape-- {
+  background-color: rgb(18, 18, 19);
+  color: rgba(209, 10, 10, 0.904);
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+  font-family: var(--fonte-segundo);
+}
+
+.rodape--link-- {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  font-family: var(--fonte-segundo);
+}
+
+@media (max-width: 480px) {
+  .cards-jogos {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-jogos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

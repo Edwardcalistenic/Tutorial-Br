@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Bogle&display=swap');
+
+
+:root {
+  --primeira-cor: rgba(209, 10, 10, 0.904);
+  --segunda-cor: rgb(28, 32, 36);
+  --terceira-cor: rgb(18, 18, 19);
+  --cor-para-links: rgb(122, 6, 6);
+  --cor-para-links2: rgb(231, 41, 41);
+  --cor-para-links3: rgb(190, 56, 7);
+  --fonte-primeiro: "BBH Bartle", sans-serif;
+  --fonte-segundo: "BBH Bogle", sans-serif;
+}
+
+body {
+  background-color: rgb(28, 32, 36);
+  color: rgba(209, 10, 10, 0.904);
+}
+
+.banner-devil {
+  width: 100%;
+  height: 180px;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-devil img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.devil--titulo {
+  text-align: left;
+  font-family: var(--fonte-primeiro);
+}
+
+.devil--texto {
+  font-family: var(--fonte-segundo);
+  font-size: 1em;
+}
+
+.devil--img {
+  margin-top: 1em;
+  border: 3px solid rgb(190, 56, 7);
+  border-radius: 7px;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+}
+
+.devil--titulo2 {
+  text-align: center;
+  font-family: var(--fonte-primeiro);
+}
+
+.devil--texto2 {
+  text-align: center;
+  font-family: var(--fonte-segundo);
+}
+
+.devil--titulo3 {
+  text-align: center;
+  font-family: var(--fonte-primeiro);
+}
+
+.video-thumb {
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+}
+
+.devil--link {
+  display: table;
+  margin: 1em auto;
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+  max-width: 100%;
+
+  padding: 10px 20px;
+
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  font-family: var(--fonte-segundo);
+}
+
+
+.rodape--devil {
+  background-color: rgb(18, 18, 19);
+  color: rgba(209, 10, 10, 0.904);
+  text-align: center;
+  padding: 2em;
+  font-size: 1.5em;
+  font-family: var(--fonte-segundo);
+}
+
+.rodape--link--devil {
+  background-color: rgb(122, 6, 6);
+  color: rgb(231, 41, 41);
+  border-radius: 7px;
+  border: solid rgb(190, 56, 7);
+  text-decoration: none;
+  font-family: var(--fonte-segundo);
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding: 1rem 0.8rem;
+  }
+
+  .dark-img {
+    max-width: 100%;
+    width: 250px;
+  }
+
+  .video-thumb {
+    max-width: 100%;
+    height: auto;
+  }
+
+}
