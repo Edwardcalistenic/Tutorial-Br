@@ -95,8 +95,10 @@ body {
   margin-bottom: 0.8em;
 }
 
-/* IMAGENS */
+/* IMAGENS CENTRALIZADAS */
 .card--img {
+  display: block;       /* transforma a imagem em bloco */
+  margin: 0 auto;       /* centraliza horizontalmente */
   width: 100%;
   max-width: 260px;
   border: 3px solid var(--cor-borda);
