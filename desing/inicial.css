@@ -1,158 +1,143 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Bogle&display=swap');
 
-
 :root {
-  --primeira-cor: rgba(209, 10, 10, 0.904);
+  --primeira-cor: rgba(209, 10, 10, 0.9);
   --segunda-cor: rgb(28, 32, 36);
   --terceira-cor: rgb(18, 18, 19);
-  --cor-para-links: rgb(122, 6, 6);
-  --cor-para-links2: rgb(231, 41, 41);
-  --cor-para-links3: rgb(190, 56, 7);
+  --cor-link: rgb(231, 41, 41);
+  --cor-borda: rgb(190, 56, 7);
   --fonte-primeiro: "BBH Bartle", sans-serif;
   --fonte-segundo: "BBH Bogle", sans-serif;
 }
 
-body {
-  background-color: rgb(28, 32, 36);
-  color: rgba(209, 10, 10, 0.904);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  background-color: var(--segunda-cor);
+  color: var(--primeira-cor);
+  font-family: var(--fonte-segundo);
+  line-height: 1.6;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+  background-color: var(--terceira-cor);
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.cabecalho a {
+  background-color: rgb(122, 6, 6);
+  color: var(--cor-link);
+  border-radius: 8px;
+  border: 2px solid var(--cor-borda);
+  text-decoration: none;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+}
+
+/* CONTEÚDO */
 .principal {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 1rem;
-}
-
-.cabecalho {
-  background-color: rgb(18, 18, 19);
-  padding: 2em;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.cabecalho--text {
-  background-color: rgb(122, 6, 6);
-  color: rgb(231, 41, 41);
-  border-radius: 7px;
-  border: solid rgb(190, 56, 7);
-  text-decoration: none;
-  margin-right: 0;
-  font-family: var(--fonte-segundo);
-}
-
-.cabecalho--text2 {
-  background-color: rgb(122, 6, 6);
-  color: rgb(231, 41, 41);
-  border-radius: 7px;
-  border: solid rgb(190, 56, 7);
-  text-decoration: none;
-  margin-right: 3.5em;
-  margin-left: 0;
-  font-family: var(--fonte-segundo);
+  padding: 1.2rem;
 }
 
 .principal--titulo {
   text-align: center;
   font-family: var(--fonte-primeiro);
+  font-size: 2rem;
+  margin-bottom: 0.5em;
 }
 
 .principal--texto {
   text-align: center;
-  font-family: var(--fonte-segundo);
+  font-size: 1rem;
+  margin-bottom: 1.2em;
 }
 
+/* SEÇÕES */
 .card {
-  display: flex;
   justify-content: center;
+  text-align: center;
   font-family: var(--fonte-primeiro);
+  margin: 1em 0;
+}
+
+/* LISTA */
+.card--lista {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 0;
 }
 
 .lista {
-  text-align: center;
-  text-decoration: transparent;
   list-style: none;
-  padding: 0;
-  margin: 0;
-
+  text-align: center;
 }
 
+/* LINKS */
 .card--link {
-  display: block;
-  margin: 0 auto;
-
-}
-
-.card--img {
-  margin-top: 1em;
-  display: block;
-  margin: auto;
-  border: 3px solid rgb(190, 56, 7);
-  border-radius: 7px;
-  width: 250px;
-  /* opcional */
-}
-
-.card--link {
+  display: inline-block;
   background-color: rgb(122, 6, 6);
-  color: rgb(231, 41, 41);
-  border-radius: 5px;
-  border: solid rgb(190, 56, 7);
+  color: var(--cor-link);
+  border-radius: 8px;
+  border: 2px solid var(--cor-borda);
   text-decoration: none;
-  margin-right: 0.5em;
-  font-family: var(--fonte-segundo);
-  margin: 2em;
+  padding: 0.6em 1.4em;
+  margin-bottom: 0.8em;
 }
 
+/* IMAGENS */
+.card--img {
+  width: 100%;
+  max-width: 260px;
+  border: 3px solid var(--cor-borda);
+  border-radius: 10px;
+}
+
+/* TEXTO FINAL */
 .card--texto {
   text-align: center;
-  font-size: 1.5em;
-  font-family: var(--fonte-segundo);
+  font-size: 1.1em;
+  margin-top: 1em;
 }
 
+/* RODAPÉ */
 .rodape {
-  background-color: rgb(18, 18, 19);
-  color: rgba(209, 10, 10, 0.904);
+  background-color: var(--terceira-cor);
   text-align: center;
-  padding: 2em;
-  font-size: 1.5em;
-  font-family: var(--fonte-segundo);
+  padding: 2em 1em;
+  font-size: 1em;
 }
 
 .rodape--link {
+  display: inline-block;
+  margin-top: 0.5em;
   background-color: rgb(122, 6, 6);
-  color: rgb(231, 41, 41);
-  border-radius: 7px;
-  border: solid rgb(190, 56, 7);
+  color: var(--cor-link);
+  border-radius: 8px;
+  border: 2px solid var(--cor-borda);
+  padding: 0.5em 1em;
   text-decoration: none;
-  font-family: var(--fonte-segundo);
 }
 
-@media screen and (max-width:500) {
+/* MOBILE */
+@media screen and (max-width: 500px) {
   .cabecalho {
     flex-direction: column;
-    gap: 1em;
+    align-items: center;
   }
 
   .cabecalho a {
-    display: block;
-    width: 80%;
+    width: 100%;
     text-align: center;
-  }
-
-  .cabecalho--text2 {
-    margin-right: 5em;
-
-  }
-
-  .card--img {
-    width: 70%;
-  }
-
-  .rodape {
-    text-align: center;
-    display: block;
-    margin: 0 auto;
   }
 }
