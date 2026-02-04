@@ -21,28 +21,62 @@ body {
   color: var(--primeira-cor);
   font-family: var(--fonte-segundo);
   line-height: 1.6;
+  padding-top: 90px;
 }
 
-/* CABEÇALHO */
 .cabecalho {
   background-color: var(--terceira-cor);
-  padding: 1.5em;
+  padding: 1em 2em;
+
   display: flex;
   justify-content: space-between;
-  gap: 1em;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
 }
 
-.cabecalho a {
+.cabecalho-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cabecalho-logo img {
+  width: 35px;
+  height: 35px;
+  opacity: 0.8;
+}
+
+.cabecalho-logo span {
+  font-family: var(--fonte-primeiro);
+  font-size: 1.2rem;
+  color: var(--primeira-cor);
+}
+
+.cabecalho-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.cabecalho-menu a {
   background-color: rgb(122, 6, 6);
   color: var(--cor-link);
-  border-radius: 8px;
+  border-radius: 6px;
   border: 2px solid var(--cor-borda);
   text-decoration: none;
-  padding: 0.6em 1.2em;
-  font-size: 1rem;
+  padding: 0.5em 1em;
+  font-size: 0.95rem;
+  transition: 0.2s;
 }
 
-/* CONTEÚDO */
+.cabecalho-menu a:hover {
+  background-color: rgb(150, 10, 10);
+}
+
 .principal {
   max-width: 1100px;
   margin: 0 auto;
@@ -62,20 +96,16 @@ body {
   margin-bottom: 1.2em;
 }
 
-/* SEÇÕES */
 .card {
-  justify-content: center;
   text-align: center;
   font-family: var(--fonte-primeiro);
   margin: 1em 0;
 }
 
-/* LISTA */
 .card--lista {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  padding: 0;
 }
 
 .lista {
@@ -83,7 +113,6 @@ body {
   text-align: center;
 }
 
-/* LINKS */
 .card--link {
   display: inline-block;
   background-color: rgb(122, 6, 6);
@@ -95,29 +124,25 @@ body {
   margin-bottom: 0.8em;
 }
 
-/* IMAGENS CENTRALIZADAS */
 .card--img {
-  display: block;       /* transforma a imagem em bloco */
-  margin: 0 auto;       /* centraliza horizontalmente */
+  display: block;
+  margin: 0 auto;
   width: 100%;
   max-width: 260px;
   border: 3px solid var(--cor-borda);
   border-radius: 10px;
 }
 
-/* TEXTO FINAL */
 .card--texto {
   text-align: center;
   font-size: 1.1em;
   margin-top: 1em;
 }
 
-/* RODAPÉ */
 .rodape {
   background-color: var(--terceira-cor);
   text-align: center;
   padding: 2em 1em;
-  font-size: 1em;
 }
 
 .rodape--link {
@@ -131,15 +156,83 @@ body {
   text-decoration: none;
 }
 
-/* MOBILE */
-@media screen and (max-width: 500px) {
-  .cabecalho {
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 80px;
   }
 
-  .cabecalho a {
-    width: 100%;
-    text-align: center;
+  .cabecalho {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6em 1em;
+  }
+
+  .cabecalho-logo img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .cabecalho-logo span {
+    font-size: 1rem;
+  }
+
+  .cabecalho-menu {
+    gap: 8px;
+  }
+
+  .cabecalho-menu a {
+    padding: 0.35em 0.7em;
+    font-size: 0.85rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 75px;
+  }
+
+  .cabecalho {
+    flex-direction: row !important; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 0.8em;
+  }
+
+  .cabecalho-logo {
+    gap: 6px;
+  }
+
+  .cabecalho-logo img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cabecalho-logo span {
+    font-size: 0.95rem;
+  }
+
+  .cabecalho-menu {
+    gap: 6px;
+  }
+
+  .cabecalho-menu a {
+    padding: 0.3em 0.6em;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .cabecalho-logo span {
+    font-size: 0.85rem;
+  }
+
+  .cabecalho-menu a {
+    font-size: 0.75rem;
+    padding: 0.25em 0.5em;
   }
 }
