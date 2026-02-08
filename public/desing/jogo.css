@@ -23,6 +23,11 @@ body {
   padding-top: 80px;
 }
 
+a {
+  color: var(--cor-link);
+  text-decoration: none;
+}
+
 .cabecalho--principal {
   background-color: var(--terceira-cor);
   padding: 0.8em 1.5em;
@@ -51,21 +56,6 @@ body {
 .cabecalho-logo span {
   font-family: var(--fonte-primeiro);
   font-size: 1.1rem;
-}
-
-.cabecalho-menu {
-  display: flex;
-  gap: 10px;
-}
-
-.cabecalho-menu a {
-  background-color: rgb(122, 6, 6);
-  color: var(--cor-link);
-  border-radius: 6px;
-  border: 2px solid var(--cor-borda);
-  text-decoration: none;
-  padding: 0.4em 0.9em;
-  font-size: 0.9rem;
 }
 
 .principal-- {
