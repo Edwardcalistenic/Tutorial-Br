@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// Caminho do banco
 const DB = path.join(__dirname, "users.json");
 
 // Ler usuários
@@ -21,15 +20,12 @@ function getUsers() {
     return JSON.parse(fs.readFileSync(DB));
 }
 
-// Salvar usuários
 function saveUsers(users) {
     fs.writeFileSync(DB, JSON.stringify(users, null, 2));
 }
 
-// Servir frontend
 app.use(express.static(path.join(__dirname, "../public")));
 
-/* ================= CADASTRO ================= */
 app.post("/register", (req, res) => {
 
     const { email, password } = req.body;
@@ -54,7 +50,6 @@ app.post("/register", (req, res) => {
 });
 
 
-/* ================= LOGIN ================= */
 app.post("/login", (req, res) => {
 
     const { email, password } = req.body;
