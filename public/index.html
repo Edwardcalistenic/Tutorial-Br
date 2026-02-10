@@ -43,17 +43,12 @@
         <div id="message"></div>
 
         <div class="register-link">
-            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+            <p>Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
         </div>
     </form>
 </div>
 
 <script>
-const users = [
-    { username: 'admin', password: 'admin' },
-    { username: 'eduardo', password: '123456' }
-];
-
 const showPassword = document.getElementById('showPassword');
 const passwordInput = document.querySelector('input[name="password"]');
 
@@ -61,25 +56,34 @@ showPassword.addEventListener('change', () => {
     passwordInput.type = showPassword.checked ? 'text' : 'password';
 });
 
-const form = document.getElementById('loginForm');
-const message = document.getElementById('message');
+const form = document.getElementById("loginForm");
+const message = document.getElementById("message");
 
-form.addEventListener('submit', (e) => {
+form.addEventListener("submit", async (e) => {
+
     e.preventDefault();
 
-    const username = form.username.value;
+    const email = form.username.value;
     const password = form.password.value;
 
-    const user = users.find(
-        u => u.username === username && u.password === password
-    );
+    const res = await fetch("/login", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+    });
 
-    if (user) {
-        window.location.href = 'inicial.html';
+    const data = await res.json();
+
+    if (data.success) {
+        window.location.href = "inicial.html";
     } else {
-        message.textContent = 'Usuário ou senha incorretos.';
+        message.textContent = data.error;
     }
+
 });
+
 </script>
 
 </body>
